@@ -30,24 +30,24 @@ const AdresseTable = () => {
                 </div>
             </form>
 
-            <table>
-                <thead>
+            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
-                        <th>Adresse</th>
-                        <th>Code de la ville</th>
-                        <th>Rue</th>
-                        <th>Ville</th>
-                        <th>Code postal</th>
+                        <th scope="col" class="px-6 py-3">Adresse</th>
+                        <th scope="col" class="px-6 py-3">Code de la ville</th>
+                        <th scope="col" class="px-6 py-3">Rue</th>
+                        <th scope="col" class="px-6 py-3">Ville</th>
+                        <th scope="col" class="px-6 py-3">Code postal</th>
                     </tr>
                 </thead>
                 <tbody>
                     {data.map((item, index) => (
-                        <tr key={index}>
-                            <td>{item.properties.label}</td>
-                            <td>{item.properties.citycode}</td>
-                            <td>{item.properties.street}</td>
-                            <td>{item.properties.city}</td>
-                            <td>{item.properties.postcode}</td>
+                        <tr key={index} class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+                            <td class="px-6 py-4">{item.properties.label}</td>
+                            <td class="px-6 py-4">{item.properties.citycode}</td>
+                            <td class="px-6 py-4">{item.properties.street}</td>
+                            <td class="px-6 py-4">{item.properties.city}</td>
+                            <td class="px-6 py-4">{item.properties.postcode}</td>
                         </tr>
                     ))}
                 </tbody>
